@@ -1,0 +1,9 @@
+# Ignore all design files
+*.sketch
+*.fig
+
+# Ignore any converted design files
+*.xd
+
+# Ignore design folder & its content
+intro-section-with-dropdown-navigation-sketch/*
