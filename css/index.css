@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+/* Media Queries */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header' 'main' 'footer';
+  /* ----------------------- Media Queries ----------------------- */
+}
+body header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body header #container #menu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body header #container #action {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: center;
+  align-items: center;
+}
+body main #text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main #text #partners {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 46.875rem) and (max-width: 73.75rem) and (min-height: 37.5rem) and (max-height: 44rem) {
+  body {
+    /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
+  }
+  body header #container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header #container #menu {
+    display: block;
+  }
+  body header #container #menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header #container #menu ul .dropdown {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body header #container #action {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main #text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+  body {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+  }
+  body header #container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header #container #menu {
+    display: block;
+  }
+  body header #container #menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header #container #menu ul .dropdown {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body header #container #action {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main #text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+header {
+  width: 100vw;
+  color: hsl(0deg, 0%, 41%);
+  grid-area: header;
+  padding: 1.5rem 0rem;
+  margin-bottom: 0.5rem;
+  /* ----------------------- Media Queries ----------------------- */
+}
+header #logo {
+  width: 5.5rem;
+  padding-left: 1.5rem;
+}
+header #ham_icon {
+  width: 2rem;
+  padding-right: 1.5rem;
+}
+header #container {
+  background-color: hsl(0deg, 0%, 98%);
+  padding: 0 1.3rem;
+  width: 53vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: -47vw 0px rgba(54, 54, 54, 0.8);
+  font-weight: bold;
+}
+header #container #close {
+  position: relative;
+  left: 86%;
+  margin-top: 1.5rem;
+}
+header #container #menu ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+header #container #menu ul.dropdown {
+  padding-left: 1.5rem;
+}
+header #container #menu ul.dropdown a {
+  margin-left: 0.8rem;
+  color: hsl(0deg, 0%, 41%);
+}
+header #container #menu ul.dropdown.hide {
+  display: none;
+}
+header #container #menu ul.hide {
+  display: none;
+}
+header #container #menu ul a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+}
+header #container #menu ul a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+header #container #menu ul li {
+  cursor: pointer;
+  margin: 1.3rem 0;
+}
+header #container #menu ul li:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+header #container #menu ul li.fix {
+  color: hsl(0deg, 0%, 8%);
+}
+header #container #menu ul li img {
+  margin-left: 0.25rem;
+}
+header #container #menu ul li img.filter {
+  filter: brightness(0) saturate(100%);
+}
+header #container #menu ul li img.rotate {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+header #container #action {
+  margin-bottom: 1.5rem;
+}
+header #container #action a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  margin-bottom: 1rem;
+}
+header #container #action a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+header #container #action button {
+  cursor: pointer;
+  width: 90%;
+  font-family: 'Epilogue', sans-serif;
+  text-align: center;
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: hsl(0deg, 0%, 41%);
+  border-color: hsl(0deg, 0%, 41%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+header #container #action button:hover {
+  color: hsl(0deg, 0%, 8%);
+  border-color: hsl(0deg, 0%, 8%);
+}
+header #container.hide {
+  display: none;
+}
+@media only screen and (min-width: 46.875rem) and (max-width: 73.75rem) and (min-height: 37.5rem) and (max-height: 44rem) {
+  header {
+    /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
+    height: 3rem;
+    padding: 1.5rem 0rem;
+  }
+  header #ham_icon {
+    display: none;
+  }
+  header #logo {
+    margin-right: 2rem;
+  }
+  header #container {
+    display: flex !important;
+    height: fit-content;
+    box-shadow: none;
+    width: 85vw;
+    min-height: fit-content;
+    position: static;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  header #container #close {
+    display: none;
+  }
+  header #container #menu {
+    width: 20rem;
+  }
+  header #container #menu ul.dropdown {
+    position: absolute;
+    margin-top: 1.2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(224, 224, 224);
+  }
+  header #container #menu ul.dropdown#feat {
+    left: 5.5rem;
+  }
+  header #container #menu ul li {
+    margin: 0.5rem 0;
+  }
+  header #container #action {
+    margin-bottom: 0rem;
+    width: 10rem;
+  }
+  header #container #action a {
+    margin: 0;
+  }
+  header #container #action button {
+    border-radius: 0.7rem;
+    padding: 0.65rem 1.1rem;
+    width: fit-content;
+  }
+}
+@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+  header {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    height: 3rem;
+    padding: 1.5rem 0rem;
+  }
+  header #ham_icon {
+    display: none;
+  }
+  header #logo {
+    margin-right: 2rem;
+  }
+  header #container {
+    display: flex !important;
+    height: fit-content;
+    box-shadow: none;
+    width: 85vw;
+    min-height: fit-content;
+    position: static;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  header #container #close {
+    display: none;
+  }
+  header #container #menu {
+    width: 25rem;
+  }
+  header #container #menu ul.dropdown {
+    position: absolute;
+    margin-top: 1.2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(224, 224, 224);
+  }
+  header #container #menu ul.dropdown#feat {
+    left: 5.5rem;
+  }
+  header #container #menu ul li {
+    margin: 0.5rem 0;
+  }
+  header #container #action {
+    margin-bottom: 0rem;
+    width: 10rem;
+  }
+  header #container #action a {
+    margin: 0;
+  }
+  header #container #action button {
+    border-radius: 0.7rem;
+    padding: 0.65rem 1.1rem;
+    width: fit-content;
+  }
+}
+
+main {
+  width: 100vw;
+  padding-bottom: 20vh;
+  /* ----------------------- Media Queries ----------------------- */
+}
+main div#text h1 {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 2.3rem;
+  margin-top: 3rem;
+}
+main div#text #parag {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: hsl(0deg, 0%, 41%);
+  text-align: center;
+  padding: 0 1rem;
+}
+main div#text button {
+  cursor: pointer;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: bold;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  padding: 0.75rem 1.3rem;
+  margin: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 1px solid hsl(0deg, 0%, 8%);
+  border-radius: 1rem;
+}
+main div#text button:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+}
+main div#text #partners {
+  width: 90%;
+}
+main div#text #partners img {
+  width: 4rem;
+}
+main div#hero #mobile {
+  width: 100vw;
+}
+main div#hero #desktop {
+  display: none;
+}
+@media only screen and (min-width: 46.875rem) and (max-width: 73.75rem) and (min-height: 37.5rem) and (max-height: 44rem) {
+  main {
+    /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
+  }
+  main div#text {
+    width: 40vw;
+    height: 75vh;
+    padding: 0 1rem 0 3rem;
+  }
+  main div#text h1 {
+    font-size: 3rem;
+  }
+  main div#text button {
+    margin: 2.5rem 0 5rem 0;
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  main div#text #parag {
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+  }
+  main div#text #partners img {
+    width: 3.5rem;
+  }
+  main div#hero #mobile {
+    display: none;
+  }
+  main div#hero #desktop {
+    display: block;
+    max-width: 30vw;
+    max-height: 75vh;
+    margin-right: 3rem;
+  }
+}
+@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+  main {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+  }
+  main div#text {
+    width: 40vw;
+    height: 75vh;
+    padding: 0 4rem;
+  }
+  main div#text h1 {
+    font-size: 4rem;
+  }
+  main div#text button {
+    margin: 2.5rem 0 5rem 0;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  main div#text #parag {
+    padding: 0;
+    text-align: left;
+  }
+  main div#text #partners img {
+    width: 4.8rem;
+  }
+  main div#hero #mobile {
+    display: none;
+  }
+  main div#hero #desktop {
+    display: block;
+    max-width: 30vw;
+    max-height: 75vh;
+    margin-right: 3rem;
+  }
+}
+
+footer {
+  width: 100vw;
+}
+footer div.attribution {
+  font-family: 'Epilogue', sans-serif;
+  padding: 1rem 0;
+}
+footer div.attribution p {
+  margin: 0;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0deg, 0%, 8%);
+}
+footer div.attribution p a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  z-index: 0;
+  font-family: 'Epilogue', sans-serif;
+  background-color: hsl(0deg, 0%, 98%);
+}
