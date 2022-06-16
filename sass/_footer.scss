@@ -1,0 +1,18 @@
+footer {
+  width: 100vw;
+  div {
+    &.attribution {
+      font-family: 'Epilogue', sans-serif;
+      padding: 1rem 0;
+      p {
+        margin: 0;
+        font-size: 11px;
+        text-align: center;
+        color: hsl(0, 0%, 8%);
+        a {
+          color: hsl(228, 45%, 44%);
+        }
+      }
+    }
+  }
+}
