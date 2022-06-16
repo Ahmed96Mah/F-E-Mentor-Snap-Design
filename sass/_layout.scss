@@ -1,0 +1,81 @@
+@use 'mixins' as m;
+
+body {
+  margin: 0;
+  @include m.displayGrid(3, 1fr, 'header' 'main' 'footer');
+  header {
+    @include m.displayFlex(row, nowrap, space-between, center);
+    #container {
+      #menu {
+        @include m.displayFlex(column, nowrap, flex-start, flex-start);
+      }
+      #action {
+        @include m.displayFlex(column, nowrap, center, center);
+      }
+    }
+  }
+  main {
+    @include m.displayFlex(row, wrap-reverse, center, center);
+    #text {
+      @include m.displayFlex(column, nowrap, center, center);
+      #partners {
+        @include m.displayFlex(row, nowrap, space-between, center);
+      }
+    }
+  }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.flippedPadScreens(46.875rem, 73.75rem, 37.5rem, 44rem) {
+    /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
+    header {
+      #container {
+        @include m.displayFlex(row, nowrap, space-between, center);
+        #menu {
+          display: block;
+          ul {
+            @include m.displayFlex(row, nowrap, space-between, center);
+            .dropdown {
+              @include m.displayFlex(column, nowrap, center, center);
+            }
+          }
+        }
+        #action {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+      }
+    }
+    main {
+      @include m.displayFlex(row, wrap-reverse, space-around, center);
+      #text {
+        @include m.displayFlex(column, nowrap, center, flex-start);
+      }
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    header {
+      #container {
+        @include m.displayFlex(row, nowrap, space-between, center);
+        #menu {
+          display: block;
+          ul {
+            @include m.displayFlex(row, nowrap, space-between, center);
+            .dropdown {
+              @include m.displayFlex(column, nowrap, center, center);
+            }
+          }
+        }
+        #action {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+      }
+    }
+    main {
+      @include m.displayFlex(row, wrap-reverse, space-around, center);
+      #text {
+        @include m.displayFlex(column, nowrap, center, flex-start);
+      }
+    }
+  }
+}
