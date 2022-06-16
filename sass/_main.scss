@@ -1,0 +1,133 @@
+@use 'mixins' as m;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
+
+main {
+  width: 100vw;
+  padding-bottom: 20vh;
+  div {
+    &#text {
+      h1 {
+        font-family: 'Epilogue', sans-serif;
+        font-size: 2.3rem;
+        margin-top: 3rem;
+      }
+      #parag {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5rem;
+        color: hsl(0, 0%, 41%);
+        text-align: center;
+        padding: 0 1rem;
+      }
+      button {
+        cursor: pointer;
+        font-family: 'Epilogue', sans-serif;
+        font-weight: bold;
+        background-color: hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 98%);
+        padding: 0.75rem 1.3rem;
+        margin: 1.5rem 1.5rem 3rem 1.5rem;
+        border: 1px solid hsl(0, 0%, 8%);
+        border-radius: 1rem;
+        &:hover {
+          background-color: hsl(0, 0%, 98%);
+          color: hsl(0, 0%, 8%);
+        }
+      }
+      #partners {
+        width: 90%;
+        img {
+          width: 4rem;
+        }
+      }
+    }
+    &#hero {
+      #mobile {
+        width: 100vw;
+      }
+      #desktop {
+        display: none;
+      }
+    }
+  }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.flippedPadScreens(46.875rem, 73.75rem, 37.5rem, 44rem) {
+    /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
+    div {
+      &#text {
+        width: 40vw;
+        height: 75vh;
+        padding: 0 1rem 0 3rem;
+        h1 {
+          font-size: 3rem;
+        }
+        button {
+          margin: 2.5rem 0 5rem 0;
+          padding: 1rem 1.5rem;
+          font-size: 0.85rem;
+        }
+        #parag {
+          padding: 0;
+          text-align: left;
+          font-size: 14px;
+        }
+        #partners {
+          img {
+            width: 3.5rem;
+          }
+        }
+      }
+      &#hero {
+        #mobile {
+          display: none;
+        }
+        #desktop {
+          display: block;
+          max-width: 30vw;
+          max-height: 75vh;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    div {
+      &#text {
+        width: 40vw;
+        height: 75vh;
+        padding: 0 4rem;
+        h1 {
+          font-size: 4rem;
+        }
+        button {
+          margin: 2.5rem 0 5rem 0;
+          padding: 1rem 1.5rem;
+          font-size: 1rem;
+        }
+        #parag {
+          padding: 0;
+          text-align: left;
+        }
+        #partners {
+          img {
+            width: 4.8rem;
+          }
+        }
+      }
+      &#hero {
+        #mobile {
+          display: none;
+        }
+        #desktop {
+          display: block;
+          max-width: 30vw;
+          max-height: 75vh;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
