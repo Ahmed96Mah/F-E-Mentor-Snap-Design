@@ -1,0 +1,12 @@
+@use 'layout';
+@use 'header';
+@use 'main';
+@use 'footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+
+body {
+  z-index: 0;
+  font-family: 'Epilogue', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
