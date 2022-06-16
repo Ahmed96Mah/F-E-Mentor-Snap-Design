@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="./images/logo.svg" alt="Snap Company's Logo">
-    <div>
-      <ul>
-        <li>Features
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Snap Company's Logo" id="logo" />
+      <div id="container" class="hide">
+        <img src="./images/icon-close-menu.svg" alt="close menu" id="close" />
+        <div id="menu">
           <ul>
-            <li>Todo List</li>
-            <li>Calendar</li>
-            <li>Reminders</li>
-            <li>Planning</li>
+            <li class="menuNode">
+              Features
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="expand list"
+                class="down"
+              />
+              <ul id="feat" class="dropdown hide">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="" />
+                  <a href="#">Todo List</a>
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="" />
+                  <a href="#">Calendar</a>
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="" />
+                  <a href="#">Reminders</a>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="" />
+                  <a href="#">Planning</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menuNode">
+              Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="expand list"
+                class="down"
+              />
+              <ul class="dropdown hide">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
           </ul>
-        </li>
-        <li>Company
-          <ul>
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
-          </ul>
-        </li>
-        <li>Careers</li>
-        <li>About</li>
-      </ul>
-    </div>
-    <div>
-      <a href="#">Login</a>
-      <button>Register</button>
-    </div>
-    <img src="./images/icon-menu.svg" alt="Hamburger menu">
-  </header>
-
-  <main>
-    <div>
-      <h1>Make remote work</h1>
-
-      <p>
-        Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.
-      </p>
-
-      <button>Learn more</button>
-
-      <div>
-        <img src="./images/client-databiz.svg" alt="databiz's logo">
-        <img src="./images/client-audiophile.svg" alt="audiophile's logo">
-        <img src="./images/client-meet.svg" alt="meet's logo">
-        <img src="./images/client-maker.svg" alt="maker's logo">
+        </div>
+        <div id="action">
+          <a href="#">Login</a>
+          <button>Register</button>
+        </div>
       </div>
-    </div>
-    <div>
-      <img src="./images/image-hero-mobile.png" alt="">
-      <img src="./images/image-hero-desktop.png" alt="">
-    </div>
-  </main>
-  
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.linkedin.com/in/ahmed-abd-al-wahab-b177a1140/">Ahmed Mahmoud Abdalwahab</a>.
-    </div>
-  </footer>
-</body>
+      <img src="./images/icon-menu.svg" alt="menu icon" id="ham_icon" />
+    </header>
+
+    <main>
+      <div id="text">
+        <h1>Make remote work</h1>
+
+        <p id="parag">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button>Learn more</button>
+
+        <div id="partners">
+          <img src="./images/client-databiz.svg" alt="databiz's logo" />
+          <img src="./images/client-audiophile.svg" alt="audiophile's logo" />
+          <img src="./images/client-meet.svg" alt="meet's logo" />
+          <img src="./images/client-maker.svg" alt="maker's logo" />
+        </div>
+      </div>
+      <div id="hero">
+        <img src="./images/image-hero-mobile.png" alt="" id="mobile" />
+        <img src="./images/image-hero-desktop.png" alt="" id="desktop" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.linkedin.com/in/ahmed-abd-al-wahab-b177a1140/"
+            target="_blank"
+            >Ahmed Mahmoud Abdalwahab</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <script src="dist/app.js"></script>
+  </body>
 </html>
