@@ -7,3 +7,9 @@
 
 # Ignore design folder & its content
 intro-section-with-dropdown-navigation-sketch/*
+
+# Ignore the node module folder
+node_modules
+
+# Ignore package-lock.json file
+package-lock.json
