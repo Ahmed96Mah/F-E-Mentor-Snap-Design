@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 footer {
   width: 100vw;
   div {
@@ -8,7 +10,7 @@ footer {
         margin: 0;
         font-size: 11px;
         text-align: center;
-        color: hsl(0, 0%, 8%);
+        color: v.$Almost_Black;
         a {
           color: hsl(228, 45%, 44%);
         }
