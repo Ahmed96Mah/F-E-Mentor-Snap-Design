@@ -1,4 +1,5 @@
 @use 'mixins' as m;
+@use 'variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
 
 main {
@@ -15,7 +16,7 @@ main {
         margin: 0;
         font-size: 16px;
         line-height: 1.5rem;
-        color: hsl(0, 0%, 41%);
+        color: v.$Medium_Gray;
         text-align: center;
         padding: 0 1rem;
       }
@@ -23,15 +24,15 @@ main {
         cursor: pointer;
         font-family: 'Epilogue', sans-serif;
         font-weight: bold;
-        background-color: hsl(0, 0%, 8%);
-        color: hsl(0, 0%, 98%);
+        background-color: v.$Almost_Black;
+        color: v.$Almost_White;
         padding: 0.75rem 1.3rem;
         margin: 1.5rem 1.5rem 3rem 1.5rem;
-        border: 1px solid hsl(0, 0%, 8%);
+        border: 1px solid v.$Almost_Black;
         border-radius: 1rem;
         &:hover {
-          background-color: hsl(0, 0%, 98%);
-          color: hsl(0, 0%, 8%);
+          background-color: v.$Almost_White;
+          color: v.$Almost_Black;
         }
       }
       #partners {
@@ -52,7 +53,7 @@ main {
   }
 
   /* ----------------------- Media Queries ----------------------- */
-  @include m.flippedPadScreens(46.875rem, 73.75rem, 37.5rem, 44rem) {
+  @include m.flippedPadScreens(64em, 75em, 37.5em) {
     /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
     div {
       &#text {
@@ -92,7 +93,7 @@ main {
     }
   }
 
-  @include m.wideScreens(43rem, 73.75rem) {
+  @include m.wideScreens(43em, 73.75em) {
     /* ------ ($min-hgt, $min-wdth) ------ */
     div {
       &#text {
