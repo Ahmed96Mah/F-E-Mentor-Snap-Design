@@ -13,8 +13,8 @@
 }
 
 /* Media Queries */
-@mixin flippedPadScreens($min-wdth, $max-wdth, $min-hgt, $max-hgt) {
-  @media only screen and (min-width: $min-wdth) and (max-width: $max-wdth) and (min-height: $min-hgt) and (max-height: $max-hgt) {
+@mixin flippedPadScreens($mn-wdth, $max-wdth, $mn-hgt) {
+  @media only screen and (min-width: $mn-wdth) and (max-width: $max-wdth) and (min-height: $mn-hgt) {
     @content;
   }
 }
