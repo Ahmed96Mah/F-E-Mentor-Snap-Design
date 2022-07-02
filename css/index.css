@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
 /* Media Queries */
 body {
   margin: 0;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: "header" "main" "footer";
   /* ----------------------- Media Queries ----------------------- */
 }
 body header {
@@ -45,7 +45,7 @@ body main #text #partners {
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (min-width: 64em) and (max-width: 75em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   body {
     /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
   }
@@ -89,7 +89,7 @@ body main #text #partners {
     align-items: flex-start;
   }
 }
-@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   body {
     /* ------ ($min-hgt, $min-wdth) ------ */
   }
@@ -226,7 +226,7 @@ header #container #action a:hover {
 header #container #action button {
   cursor: pointer;
   width: 90%;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   text-align: center;
   border: 2px solid hsl(0deg, 0%, 41%);
   border-radius: 0.5rem;
@@ -242,7 +242,7 @@ header #container #action button:hover {
 header #container.hide {
   display: none;
 }
-@media only screen and (min-width: 64em) and (max-width: 75em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   header {
     /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
     height: 3rem;
@@ -294,7 +294,7 @@ header #container.hide {
     width: fit-content;
   }
 }
-@media only screen and (min-height: 43em) and (min-width: 73.75em) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   header {
     /* ------ ($min-hgt, $min-wdth) ------ */
     height: 3rem;
@@ -353,7 +353,7 @@ main {
   /* ----------------------- Media Queries ----------------------- */
 }
 main div#text h1 {
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   font-size: 2.3rem;
   margin-top: 3rem;
 }
@@ -367,7 +367,7 @@ main div#text #parag {
 }
 main div#text button {
   cursor: pointer;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   font-weight: bold;
   background-color: hsl(0deg, 0%, 8%);
   color: hsl(0deg, 0%, 98%);
@@ -392,7 +392,7 @@ main div#hero #mobile {
 main div#hero #desktop {
   display: none;
 }
-@media only screen and (min-width: 64em) and (max-width: 75em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   main {
     /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
   }
@@ -427,7 +427,7 @@ main div#hero #desktop {
     margin-right: 3rem;
   }
 }
-@media only screen and (min-height: 43em) and (min-width: 73.75em) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   main {
     /* ------ ($min-hgt, $min-wdth) ------ */
   }
@@ -466,7 +466,7 @@ footer {
   width: 100vw;
 }
 footer div.attribution {
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   padding: 1rem 0;
 }
 footer div.attribution p {
@@ -481,6 +481,6 @@ footer div.attribution p a {
 
 body {
   z-index: 0;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   background-color: hsl(0deg, 0%, 98%);
 }
