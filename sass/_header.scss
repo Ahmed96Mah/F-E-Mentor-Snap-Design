@@ -110,7 +110,7 @@ header {
   }
 
   /* ----------------------- Media Queries ----------------------- */
-  @include m.flippedPadScreens(64em, 75em, 37.5em) {
+  @include m.flippedPadScreens(64rem, 75rem, 37.5rem) {
     /* ------ ($min-wdth, $max-wdth, $min-hgt, $max-hgt) ------ */
     height: 3rem;
     padding: 1.5rem 0rem;
@@ -163,7 +163,7 @@ header {
     }
   }
 
-  @include m.wideScreens(43em, 73.75em) {
+  @include m.wideScreens(37.5rem, 73.75rem) {
     /* ------ ($min-hgt, $min-wdth) ------ */
     height: 3rem;
     padding: 1.5rem 0rem;
