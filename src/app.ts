@@ -3,6 +3,17 @@ const processClick = (e: Event) => {
     (e.target as HTMLElement).nodeName === 'LI' &&
     (e.target as HTMLElement).classList.contains('menuNode')
   ) {
+    // Before opening the required list, check that there isn't any open lists
+    const listItems = document.querySelectorAll('.menuNode')!;
+
+    for (const item of listItems) {
+      if (item.classList.contains('fix') && item !== (e.target as HTMLElement)) {
+        item.classList.toggle('fix');
+        item.querySelector('ul')!.classList.toggle('hide');
+        item.querySelector('.down')!.classList.toggle('rotate');
+        item.querySelector('.down')!.classList.toggle('filter');
+      }
+    }
     (e.target as HTMLElement).classList.toggle('fix');
     (e.target as HTMLElement).querySelector('ul')!.classList.toggle('hide');
     (e.target as HTMLElement)
@@ -18,6 +29,7 @@ const processClick = (e: Event) => {
       document.querySelector('#container')!.classList.toggle('hide');
     }
   } else {
+    // If there is a click anywhere on the page, other than the list, close any open dropdown list
     const listItems = document.querySelectorAll('.menuNode')!;
 
     for (const item of listItems) {
